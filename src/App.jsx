@@ -1,4 +1,4 @@
-import { Footer } from "./components/headerAndFooter/Footer"
+import { Footer } from "./components/Footer/Footer"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/styles/main.css"
 

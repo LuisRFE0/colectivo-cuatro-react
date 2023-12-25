@@ -1,4 +1,6 @@
 import React from 'react'
+
+import "./assets/styles/footer.css"
 import facebook from '../../assets/images/icons/fb.png'
 import insta from '../../assets/images/icons/insta.png'
 import twitter from '../../assets/images/icons/x.png'
