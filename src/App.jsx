@@ -1,9 +1,10 @@
 import { Footer } from "./components/Footer/Footer"
-import "bootstrap/dist/css/bootstrap.min.css"
-import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./assets/styles/main.css"
 import { Header } from "./components/Header/Header";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Index } from "./components/Index/Index";
+import { Products } from "./components/Products/Products";
+import { Contact } from "./components/Contact/Contact";
 
 
 export const App = () => {
@@ -15,7 +16,10 @@ export const App = () => {
             <BrowserRouter>
                 <Header />
                 <Routes>
-
+                    <Route path="/" index element={<Index />} />
+                    <Route path="/productos" element={<Products />} />
+                    <Route path="/contacto" element={<Contact />} />
+                    <Route path="/" index element={<Index />} />
 
 
                 </Routes>

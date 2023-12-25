@@ -1,6 +1,6 @@
 import React from 'react'
 import "../../assets/styles/contacto.css"
-import logo_carita from "../../assets/images/logo-carita.png"
+import logo_carita from "../../assets/images/home/logo-carita.png"
 
 export const Contact = () => {
     return (

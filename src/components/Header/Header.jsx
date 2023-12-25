@@ -1,4 +1,4 @@
-import '../../assets/styles/header.css';
+import '../../assets/styles/header.css'
 import logo from '../../assets/images/home/logo-carita.png';
 import { Link } from 'react-router-dom';
 
@@ -23,16 +23,16 @@ export const Header = () => {
                                     <Link className="nav-link color-texto active" to='/'>Inicio</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link color-texto" href="#"> Productos</Link>
+                                    <Link className="nav-link color-texto" to='/productos'> Productos</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link color-texto" href="#">Contacto</Link>
+                                    <Link className="nav-link color-texto" to='contacto'>Contacto</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link color-texto" href="#">Conócenos</Link>
+                                    <Link className="nav-link color-texto" to='/nosotros'>Conócenos</Link>
                                 </li>
                                 <li className="nav-item dropdown">
-                                    <Link id="item-1" className="nav-link dropdown-toggle" href="#"
+                                    <Link to='/sesion' id="item-1" className="nav-link dropdown-toggle"
                                         role="button" aria-expanded="false" >
                                         Iniciar sesión
                                     </Link>
@@ -42,12 +42,11 @@ export const Header = () => {
                                     </ul>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link color-texto" href="#"><i
+                                    <Link to='/carrito' className="nav-link color-texto"><i
                                         className="fa-solid fa-cart-shopping"></i></Link>
                                 </li>
                             </ul>
                         </div>
-
                     </div>
                 </nav>
             </header>

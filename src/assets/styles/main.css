@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 11b37f9402ad839d12cd52b959625b3eea451184
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
 
 :root {
@@ -15,10 +11,6 @@
     font-family: 'raleway';
     font-weight: 400;
 }
-
-
-
-
 
 .iconos-local {
     display: flex;
@@ -137,13 +129,9 @@
     box-shadow: 2px 2px 5px 0px var(--amarillo);
 }
 
-/* Estilos para dispositivos de escritorio */
 
-/* Estilos para tabletas */
 @media only screen and (max-width: 768px) {
 
-<<<<<<< HEAD
-    /* Agrega aquí tus estilos para tabletas */
     .icon-local {
         width: 20px;
     }
@@ -151,9 +139,6 @@
     .carousel-inner,
     .carousel-inner img,
     .carousel-item {
-=======
-    .carousel-inner, .carousel-inner img, .carousel-item{
->>>>>>> 11b37f9402ad839d12cd52b959625b3eea451184
         height: 70vh;
     }
 
@@ -166,10 +151,9 @@
 
 }
 
-/* Estilos para teléfonos móviles */
+
 @media only screen and (max-width: 480px) {
 
-    /* Agrega aquí tus estilos para teléfonos móviles */
     .carousel-inner,
     .carousel-inner img,
     .carousel-item {
