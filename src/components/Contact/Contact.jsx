@@ -1,6 +1,6 @@
-import "./assets/styles/contacto.css"
-
 import React from 'react'
+import "../../assets/styles/contacto.css"
+import logo_carita from "../../assets/images/logo-carita.png"
 
 export const Contact = () => {
     return (
@@ -10,7 +10,7 @@ export const Contact = () => {
             </div>
             <div className="col-lg-6" id="info-container">
                 <h4 id="info-header">Información de contacto</h4>
-                <img src="../images/logo-carita.png" id="logo-contacto" />
+                <img src={logo_carita} id="logo-contacto" />
                 <p id="info-description" className="mt-2">
                     <strong>Envíos y entregas en todo CDMX</strong>
                 </p>
