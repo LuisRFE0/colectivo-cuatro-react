@@ -28,6 +28,7 @@
 #info-description {
     padding-top: 1rem;
 }
+
 #form-container {
     border-left: 2px solid var(--azul);
     padding: 3rem 2rem;
@@ -36,7 +37,8 @@
 label {
     font-weight: 700;
 }
-.alerta-error{
+
+.alerta-error {
     width: 100%;
     padding: 1rem;
     font-size: 16px;
@@ -61,6 +63,7 @@ label {
     #info-container {
         padding: 1rem 2rem;
     }
+
     #form-container {
         border-left: none;
         width: 90%;

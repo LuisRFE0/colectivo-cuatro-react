@@ -1,0 +1,43 @@
+:root {
+
+    --rosa: #FAB4C8;
+    --amarillo: #FAF0A0;
+    --azul: #0A3C82;
+}
+
+
+.img-round-local {
+    padding: 16px 16px;
+    width: 180px;
+    height: 180px;
+}
+
+.card-local {
+    background-color: var(--azul);
+    width: 350px;
+    height: 420px;
+    color: white;
+    border-radius: 32px;
+    border-radius: 24px;
+
+}
+
+.card-local:hover {
+    background-color: var(--rosa);
+    color: var(--azul);
+}
+
+.card-body {
+    background-color: #FFFFFF;
+    color: var(--azul);
+    border-radius: 0px 0px 24px 24px;
+}
+
+.card-body h4 {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.scrum-role {
+    font-weight: 700;
+}
