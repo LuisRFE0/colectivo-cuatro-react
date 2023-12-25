@@ -17,10 +17,10 @@ export const App = () => {
             <BrowserRouter>
                 <Header />
                 <Routes>
-                    <Route path="/" index element={<Index />} />
-                    <Route path="/productos" element={<Products />} />
-                    <Route path="/contacto" element={<Contact />} />
-                    <Route path="/nosotros" index element={<Nosotros />} />
+                    <Route path="/colectivo-cuatro-react/" index element={<Index />} />
+                    <Route path="/colectivo-cuatro-react/productos" element={<Products />} />
+                    <Route path="/colectivo-cuatro-react/contacto" element={<Contact />} />
+                    <Route path="/colectivo-cuatro-react/nosotros" index element={<Nosotros />} />
 
 
                 </Routes>

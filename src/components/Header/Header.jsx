@@ -8,7 +8,7 @@ export const Header = () => {
             <header>
                 <nav className="navbar navbar-expand-lg  navegacion" data-bs-theme="dark">
                     <div className="container-fluid">
-                        <Link className="color-texto-logo" to='/'>
+                        <Link className="color-texto-logo" to='/colectivo-cuatro-react/'>
                             <img src={logo} alt="Logo" width="35" height="35"
                                 className="d-inline-block align-text-top" />
                             <span className="colectivo">Colectivo Cuatro</span>
@@ -20,19 +20,19 @@ export const Header = () => {
                         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                             <ul className="navbar-nav">
                                 <li className="nav-item">
-                                    <Link className="nav-link color-texto active" to='/'>Inicio</Link>
+                                    <Link className="nav-link color-texto active" to='/colectivo-cuatro-react/'>Inicio</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link color-texto" to='/productos'> Productos</Link>
+                                    <Link className="nav-link color-texto" to='/colectivo-cuatro-react/productos'> Productos</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link color-texto" to='contacto'>Contacto</Link>
+                                    <Link className="nav-link color-texto" to='/colectivo-cuatro-react/contacto'>Contacto</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link color-texto" to='/nosotros'>Conócenos</Link>
+                                    <Link className="nav-link color-texto" to='/colectivo-cuatro-react/nosotros'>Conócenos</Link>
                                 </li>
                                 <li className="nav-item dropdown">
-                                    <Link to='/sesion' id="item-1" className="nav-link dropdown-toggle"
+                                    <Link to='/colectivo-cuatro-react/sesion' id="item-1" className="nav-link dropdown-toggle"
                                         role="button" aria-expanded="false" >
                                         Iniciar sesión
                                     </Link>
@@ -42,7 +42,7 @@ export const Header = () => {
                                     </ul>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to='/carrito' className="nav-link color-texto"><i
+                                    <Link to='/colectivo-cuatro-react/carrito' className="nav-link color-texto"><i
                                         className="fa-solid fa-cart-shopping"></i></Link>
                                 </li>
                             </ul>
