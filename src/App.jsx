@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Index } from "./components/Index/Index";
 import { Products } from "./components/Products/Products";
 import { Contact } from "./components/Contact/Contact";
-import { Nosotros } from "./components/nosotros/nosotros";
+import { Nosotros } from "./components/AboutUs/Nosotros";
 
 
 export const App = () => {
@@ -24,8 +24,9 @@ export const App = () => {
 
 
                 </Routes>
+                
+                <Footer />
             </BrowserRouter>
-            <Footer />
 
         </>
     )

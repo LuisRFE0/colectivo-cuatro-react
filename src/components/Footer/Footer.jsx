@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 
 import "../../assets/styles/footer.css"
@@ -17,18 +18,18 @@ export const Footer = () => {
                 <br />
                 <div className="row enlaces">
                     <div className="col-5 enlaces-local col-sm-5 ">
-                        <a className="enlace-local" href="./assets/pages/nosotros.html">
+                        <Link className="enlace-local" to="/colectivo-cuatro-react/nosotros">
                             Conócenos
-                        </a>
-                        <a className="enlace-local" href="./assets/pages/contacto.html">
+                        </Link>
+                        <Link className="enlace-local" to="/colectivo-cuatro-react/contacto">
                             Contacto
-                        </a>
-                        <a
+                        </Link>
+                        <Link
                             className="enlace-local"
-                            href="./assets/pages/politica-privacidad.html"
+                            to="/colectivo-cuatro-react/politica-privacidad    "
                         >
                             Política de privacidad
-                        </a>
+                        </Link>
                     </div>
                     <div className="col-7 iconos-local col-sm-7">
                         <img
