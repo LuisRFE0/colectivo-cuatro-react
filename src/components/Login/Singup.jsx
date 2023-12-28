@@ -1,6 +1,29 @@
 import logo from '../../assets/images/home/logo-carita.png';
 import imgLogin from '../../assets/images/home/Image_login.png'
+import { useState } from 'react';
+import { validarForm } from '../../assets/js/login/singupFunction';
+import '../../assets/styles/singup.css';
+
 const Singup = () => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+
+
+
+    const validarFormComponente = (e) => {
+        e.preventDefault();
+        const datosPersona = {
+            nombre: name,
+            correo: email,
+            contra: password,
+            confrimContra: confirmPassword
+        }
+        validarForm(datosPersona);
+    }
+
+
     return (
         <>
             <section>
@@ -16,7 +39,7 @@ const Singup = () => {
                             <h3 className="login-welcome color-font color-font-700">
                                 Crear cuenta
                             </h3>
-                            <form action="#" id="form">
+                            <form action="#" id="form" onSubmit={validarFormComponente}>
                                 <div className="mb-3 row">
                                     <label
                                         htmlFor="input-nombre"
@@ -26,6 +49,9 @@ const Singup = () => {
                                     </label>
                                     <div className="col-sm-10">
                                         <input
+                                            onChange={function (e) {
+                                                setName(e.target.value);
+                                            }}
                                             type="text"
                                             className="form-control"
                                             id="input-nombre"
@@ -42,6 +68,9 @@ const Singup = () => {
                                     </label>
                                     <div className="col-sm-10">
                                         <input
+                                            onChange={function (e) {
+                                                setEmail(e.target.value);
+                                            }}
                                             type="email"
                                             className="form-control"
                                             id="input-email"
@@ -58,6 +87,9 @@ const Singup = () => {
                                     </label>
                                     <div className="col-sm-10">
                                         <input
+                                            onChange={function (e) {
+                                                setPassword(e.target.value);
+                                            }}
                                             type="password"
                                             className="form-control"
                                             id="input-password"
@@ -74,6 +106,9 @@ const Singup = () => {
                                     </label>
                                     <div className="col-sm-10 col-md-10">
                                         <input
+                                            onChange={function (e) {
+                                                setConfirmPassword(e.target.value);
+                                            }}
                                             type="password"
                                             className="form-control"
                                             id="input-confirm-password"
@@ -92,6 +127,7 @@ const Singup = () => {
                     </div>
                 </div>
             </section>
+            <br /><br />
 
         </>
 
@@ -99,3 +135,4 @@ const Singup = () => {
 }
 
 export default Singup
+

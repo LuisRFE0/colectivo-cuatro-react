@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import imgLogin from '../../assets/images/home/Image_login.png'
 import logo from '../../assets/images/home/logo-carita.png';
 import '../../assets/styles/login.css'
+
 export const Login = () => {
 
     return (

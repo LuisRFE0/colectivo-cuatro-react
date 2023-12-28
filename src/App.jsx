@@ -24,8 +24,8 @@ export const App = () => {
                     <Route path="/colectivo-cuatro-react/contacto" element={<Contact />} />
                     <Route path="/colectivo-cuatro-react/nosotros" element={<Nosotros />} />
                     <Route path="/colectivo-cuatro-react/login" element={<Login />} />
-                    <Route path="/colectivo-cuatro-react/signup" element={<Singup />} />
-                    <Route path="/colectivo-cuatro-react/carrito" />
+                    <Route path="/colectivo-cuatro-react/singup" element={<Singup />} />
+
 
 
                 </Routes>

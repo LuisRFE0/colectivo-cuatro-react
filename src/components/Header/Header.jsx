@@ -8,22 +8,22 @@ export const Header = () => {
     const [url, setUrl] = useState(null);
 
     useEffect(() => {
-      setUrl(location.pathname);
+        setUrl(location.pathname);
     }, [location]);
 
-    console.log(url);
+
 
     return (
         <>
             <header>
-             <nav className="navbar navbar-expand-lg  navegacion" data-bs-theme="dark">
+                <nav className="navbar navbar-expand-lg  navegacion" data-bs-theme="dark">
                     <div className="container-fluid">
-                       
-                    <Link to="/colectivo-cuatro-react" className='color-texto-logo'>
+
+                        <Link to="/colectivo-cuatro-react" className='color-texto-logo'>
                             <img src={logo} alt="Logo" width="42" height="42"
                                 className="d-inline-block align-text-top" />
                             <span className="colectivo">Colectivo Cuatro</span>
-                    </Link>
+                        </Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
