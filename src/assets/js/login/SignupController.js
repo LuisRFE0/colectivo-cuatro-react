@@ -8,11 +8,15 @@ class SignupController {
 
     //Guardar persona en localstorage
     addPerson(datos) {
+
+        this.loadPersonFromLocalStorage();
+        console.log(this.datosPersona);
         if (this.verificarExistente(datos)) {
             return false;
         } else {
-            this.datosPersona = [...this.datosPersona, datos[0]];
+            this.datosPersona = [...this.datosPersona, datos];
             localStorage.setItem('usuario', JSON.stringify(this.datosPersona));
+            this.datosPersona.pop();
             return true;
 
         }
@@ -21,7 +25,8 @@ class SignupController {
 
 
     verificarExistente(datos) {
-        return this.datosPersona.some(persona => persona.email == datos[0].email);
+
+        return this.datosPersona.some(persona => persona.email == datos.email);
     }
 
 
@@ -32,11 +37,13 @@ class SignupController {
 
         if (storageItems) {
             const user = JSON.parse(storageItems)
+            this.datosPersona = [];
             for (let i = 0, size = user.length; i < size; i++) {
                 const user2 = user[i];
                 this.datosPersona.push(user2);
             }
         }
+
     }
 
 }
