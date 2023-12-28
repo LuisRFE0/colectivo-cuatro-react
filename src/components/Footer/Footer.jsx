@@ -56,7 +56,7 @@ export const Footer = () => {
                 </div>
                 <br />
             </div>
-            <p style={{ textAlign: "end" }}>© 2023. JavaAdictos</p>
+            <span className='footer-copyright'>© 2023. JavaAdictos</span>
         </footer>
     )
 }

@@ -1,18 +1,29 @@
 import '../../assets/styles/header.css'
 import logo from '../../assets/images/home/logo-carita.png';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 export const Header = () => {
+    const location = useLocation();
+    const [url, setUrl] = useState(null);
+
+    useEffect(() => {
+      setUrl(location.pathname);
+    }, [location]);
+
+    console.log(url);
+
     return (
         <>
             <header>
-                <nav className="navbar navbar-expand-lg  navegacion" data-bs-theme="dark">
+             <nav className="navbar navbar-expand-lg  navegacion" data-bs-theme="dark">
                     <div className="container-fluid">
-                        <Link className="color-texto-logo" to='/colectivo-cuatro-react/'>
-                            <img src={logo} alt="Logo" width="35" height="35"
+                       
+                    <Link to="/colectivo-cuatro-react" className='color-texto-logo'>
+                            <img src={logo} alt="Logo" width="42" height="42"
                                 className="d-inline-block align-text-top" />
                             <span className="colectivo">Colectivo Cuatro</span>
-                        </Link>
+                    </Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
@@ -20,19 +31,19 @@ export const Header = () => {
                         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                             <ul className="navbar-nav">
                                 <li className="nav-item">
-                                    <Link className="nav-link color-texto active" to='/colectivo-cuatro-react/'>Inicio</Link>
+                                    <Link to="/colectivo-cuatro-react" className={url === "/colectivo-cuatro-react" ? "nav-active" : ""}>Inicio</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link color-texto" to='/colectivo-cuatro-react/productos'> Productos</Link>
+                                    <Link to="/colectivo-cuatro-react/productos" className={url === "/colectivo-cuatro-react/productos" ? "nav-active" : ""}> Productos</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link color-texto" to='/colectivo-cuatro-react/contacto'>Contacto</Link>
+                                    <Link to="/colectivo-cuatro-react/contacto" className={url === "/colectivo-cuatro-react/contacto" ? "nav-active" : ""}>Contacto</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link color-texto" to='/colectivo-cuatro-react/nosotros'>Conócenos</Link>
+                                    <Link Link to="/colectivo-cuatro-react/nosotros" className={url === "/colectivo-cuatro-react/nosotros" ? "nav-active" : ""}>Conócenos</Link>
                                 </li>
                                 <li className="nav-item dropdown">
-                                    <Link to='/colectivo-cuatro-react/sesion' id="item-1" className="nav-link dropdown-toggle"
+                                    <Link to='/colectivo-cuatro-react/login' id="item-1" className="nav-NavLink dropdown-toggle"
                                         role="button" aria-expanded="false" >
                                         Iniciar sesión
                                     </Link>
@@ -42,7 +53,7 @@ export const Header = () => {
                                     </ul>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to='/colectivo-cuatro-react/carrito' className="nav-link color-texto"><i
+                                    <Link to="/colectivo-cuatro-react/carritp" className={url === "/colectivo-cuatro-react/carrito" ? "nav-active" : ""}><i
                                         className="fa-solid fa-cart-shopping"></i></Link>
                                 </li>
                             </ul>
