@@ -31,7 +31,7 @@ export const Header = () => {
                         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                             <ul className="navbar-nav">
                                 <li className="nav-item">
-                                    <Link to="/colectivo-cuatro-react" className={url === "/colectivo-cuatro-react" ? "nav-active" : ""}>Inicio</Link>
+                                    <Link to="/colectivo-cuatro-react/" className={url === "/colectivo-cuatro-react/" ? "nav-active" : ""}>Inicio</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link to="/colectivo-cuatro-react/productos" className={url === "/colectivo-cuatro-react/productos" ? "nav-active" : ""}> Productos</Link>

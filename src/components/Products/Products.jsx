@@ -1,8 +1,12 @@
 
-import React from 'react'
-import "../../assets/styles/productos.css"
+import React from 'react';
+import useScript from '../../assets/js/useScript';
+import '../../assets/styles/productos.css';
+
 
 export const Products = () => {
+    useScript('./src/assets/js/ProductsController.js')
+    useScript('./src/assets/js/productos.js')
     return (
         <main className="container">
             <section className="row">
@@ -13,7 +17,7 @@ export const Products = () => {
                     </div>
                 </div>
             </section>
-            <section className="row products-container"></section>
+            <section className="row products-container" ></section>
             {/* INICIO Y FIN DE CONTENEDOR DE LOS PRODUCTOS */}
             <section className="products" />
             {/* INICIO DE MODAL MODO RESPONSIVO */}

@@ -61,3 +61,8 @@ span.colectivo {
     background-color: var(--rosa);
 }
 
+@media only screen and (max-width: 480px) {
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+}
