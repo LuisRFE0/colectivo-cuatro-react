@@ -189,12 +189,15 @@ function limpiarAlerta() {
 }
 
 function registrarUser(datos) {
-    const baseUrl = 'http://localhost:5173/colectivo-cuatro-react';
+    const login = 'http://localhost:5173/colectivo-cuatro-react/login';
 
-    if (!signupController.addPerson(datos)) {
+
+    const verificacion = signupController.addPerson(datos);
+
+    if (!verificacion) {
         alertaHtml('La cuenta ya ha sido registrada', 'error');
     } else {
         alertaHtml('Cuenta registrada exitosamente');
-        // location.href = baseUrl
+        location.href = login;
     }
 }
