@@ -8,20 +8,40 @@ class SignupController {
 
     //Guardar persona en localstorage
     addPerson(datos) {
-        if (this.verificarExistente(datos)) {
+        this.loadPersonFromLocalStorage();
+        const existePersona = this.verificarExistente(datos);
+        if (existePersona) {
+            console.log('Si esxiste la persina');
             return false;
         } else {
-            this.datosPersona = [...this.datosPersona, datos[0]];
-            localStorage.setItem('usuario', JSON.stringify(this.datosPersona));
+            console.log('No existe se puede registrar');
+            let nuevoStorage = [...this.datosPersona, datos];
+            localStorage.setItem('usuario', JSON.stringify(nuevoStorage));
+            nuevoStorage = [];
+            console.log(nuevoStorage);
             return true;
-
         }
+
+
+
+        // console.log(this.datosPersona);
+        // if (this.verificarExistente(datos)) {
+        //     return false;
+        // } else {
+        //     
+        //     
+        //     return true;
+
+        // }
 
     }
 
 
-    verificarExistente(datos) {
-        return this.datosPersona.some(persona => persona.email == datos[0].email);
+    verificarExistente({ correo }) {
+        const respuesta = this.datosPersona.some(personaGuardada => {
+            return personaGuardada.correo === correo;
+        });
+        return respuesta;
     }
 
 
@@ -32,11 +52,13 @@ class SignupController {
 
         if (storageItems) {
             const user = JSON.parse(storageItems)
+            this.datosPersona = [];
             for (let i = 0, size = user.length; i < size; i++) {
                 const user2 = user[i];
                 this.datosPersona.push(user2);
             }
         }
+
     }
 
 }

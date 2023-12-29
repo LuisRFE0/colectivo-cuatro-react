@@ -3,8 +3,11 @@ import imgLogin from '../../assets/images/home/Image_login.png'
 import { useState } from 'react';
 import { validarForm } from '../../assets/js/login/singupFunction';
 import '../../assets/styles/singup.css';
+import SignupController from '../../assets/js/login/SignupController';
+
 
 const Singup = () => {
+
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');

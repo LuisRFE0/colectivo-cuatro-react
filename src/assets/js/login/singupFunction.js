@@ -112,12 +112,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 */
-import SignupController from './SignupController';
 
+import SignupController from './SignupController';
+const signupController = new SignupController;
 export const validarForm = (datosFormulario) => {
 
     if (validarFormulario(datosFormulario)) {
-        // registrarUser(datosFormulario);
+        registrarUser(datosFormulario);
         console.log('paso');
     } else {
         console.log('No paso');
@@ -128,7 +129,6 @@ export const validarForm = (datosFormulario) => {
 
 function validarFormulario({ nombre: name, correo: email, contra: password, confrimContra: confirmPassword }) {
 
-    console.log('Antes de validar', name, email, password, confirmPassword);
 
     let respuesta;
 
@@ -185,5 +185,19 @@ function alertaHtml(mensaje, estado) {
 function limpiarAlerta() {
     while (alerta.firstChild) {
         alerta.removeChild(alerta.firstChild)
+    }
+}
+
+function registrarUser(datos) {
+    const login = 'http://localhost:5173/colectivo-cuatro-react/login';
+
+
+    const verificacion = signupController.addPerson(datos);
+
+    if (!verificacion) {
+        alertaHtml('La cuenta ya ha sido registrada', 'error');
+    } else {
+        alertaHtml('Cuenta registrada exitosamente');
+        location.href = login;
     }
 }
