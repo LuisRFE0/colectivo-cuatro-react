@@ -1,3 +1,4 @@
+import { redirect } from 'react-router-dom';
 
 export function inciarSesion(user) {
 
@@ -9,10 +10,10 @@ export function inciarSesion(user) {
                 sesion: true,
                 email: user.correo
             }
-            const inicio = 'http://localhost:5173/colectivo-cuatro-react';
+
 
             localStorage.setItem('sesion', JSON.stringify(sesion));
-            location.href = inicio;
+            redirect('/colectivo-cuatro-react')
 
         } else {
             alertaHtml("Email o contraseña incorrectos", "error");

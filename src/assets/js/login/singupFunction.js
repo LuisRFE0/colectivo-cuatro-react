@@ -189,7 +189,6 @@ function limpiarAlerta() {
 }
 
 function registrarUser(datos) {
-    const login = 'http://localhost:5173/colectivo-cuatro-react/login';
 
 
     const verificacion = signupController.addPerson(datos);
@@ -198,6 +197,6 @@ function registrarUser(datos) {
         alertaHtml('La cuenta ya ha sido registrada', 'error');
     } else {
         alertaHtml('Cuenta registrada exitosamente');
-        location.href = login;
+
     }
 }

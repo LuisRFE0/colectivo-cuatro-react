@@ -1,7 +1,7 @@
 import '../../assets/styles/header.css'
 import logo from '../../assets/images/home/logo-carita.png';
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, redirect, useLocation } from 'react-router-dom';
 import { sesionActiva } from '../../assets/js/login/sesionIniciada';
 
 const sesion = sesionActiva();
@@ -52,7 +52,7 @@ export const Header = () => {
                                     </Link>
                                     <ul className="dropdown-menu">
                                         <li id="item-2">Perfil</li>
-                                        <li id="item-3"><button className='nav-link color-texto' onClick={function () { localStorage.removeItem('sesion'); window.location.reload(); }}>Cerrar Sesión</button></li>
+                                        <li id="item-3"><button className='nav-link color-texto' onClick={function () { localStorage.removeItem('sesion'); return redirect('/colectivo-cuatro-react/') }}>Cerrar Sesión</button></li>
                                     </ul>
                                 </li>
 
