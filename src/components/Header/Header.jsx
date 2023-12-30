@@ -2,6 +2,9 @@ import '../../assets/styles/header.css'
 import logo from '../../assets/images/home/logo-carita.png';
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { sesionActiva } from '../../assets/js/login/sesionIniciada';
+
+const sesion = sesionActiva();
 
 export const Header = () => {
     const location = useLocation();
@@ -10,8 +13,6 @@ export const Header = () => {
     useEffect(() => {
         setUrl(location.pathname);
     }, [location]);
-
-
 
     return (
         <>
@@ -42,16 +43,21 @@ export const Header = () => {
                                 <li className="nav-item">
                                     <Link Link to="/colectivo-cuatro-react/nosotros" className={url === "/colectivo-cuatro-react/nosotros" ? "nav-active" : ""}>Conócenos</Link>
                                 </li>
+
+
                                 <li className="nav-item dropdown">
                                     <Link to='/colectivo-cuatro-react/login' id="item-1" className="nav-NavLink dropdown-toggle"
-                                        role="button" aria-expanded="false" >
-                                        Iniciar sesión
+                                        role="button" aria-expanded="false" data-bs-toggle={sesion ? 'dropdown' : ''} >
+                                        {sesion ? 'Cuenta' : 'Iniciar Sesión'}
                                     </Link>
                                     <ul className="dropdown-menu">
-                                        <li id="item-2"></li>
-                                        <li id="item-3"></li>
+                                        <li id="item-2">Perfil</li>
+                                        <li id="item-3"><button className='nav-link color-texto' onClick={function () { localStorage.removeItem('sesion'); window.location.reload(); }}>Cerrar Sesión</button></li>
                                     </ul>
                                 </li>
+
+
+
                                 <li className="nav-item">
                                     <Link to="/colectivo-cuatro-react/carritp" className={url === "/colectivo-cuatro-react/carrito" ? "nav-active" : ""}><i
                                         className="fa-solid fa-cart-shopping"></i></Link>
