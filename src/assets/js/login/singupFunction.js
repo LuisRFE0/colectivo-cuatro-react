@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 */
 
+
 import SignupController from './SignupController';
 const signupController = new SignupController;
 export const validarForm = (datosFormulario) => {
@@ -195,8 +196,14 @@ function registrarUser(datos) {
 
     if (!verificacion) {
         alertaHtml('La cuenta ya ha sido registrada', 'error');
+
+
     } else {
         alertaHtml('Cuenta registrada exitosamente');
-
+        redirects();
     }
+}
+
+const redirects = () => {
+    location.href = '/colectivo-cuatro-react/';
 }

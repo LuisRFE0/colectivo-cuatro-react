@@ -12,3 +12,6 @@ function elementoSesion() {
         return false;
     }
 }
+export function hacere() {
+    location.href = '/colectivo-cuatro-react';
+}

@@ -18,7 +18,7 @@ class SignupController {
             let nuevoStorage = [...this.datosPersona, datos];
             localStorage.setItem('usuario', JSON.stringify(nuevoStorage));
             nuevoStorage = [];
-            console.log(nuevoStorage);
+
             return true;
         }
 
