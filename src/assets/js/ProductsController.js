@@ -56,8 +56,6 @@ class ProductsController {
     }
 
 
-
-
     deleteProduct(id) {
         limpiarHtml2();
         //Obtengo los datos de localStorage
@@ -138,7 +136,6 @@ class ProductsController {
             }
         }
     }
-
-
-
 }  
+
+export default ProductsController;

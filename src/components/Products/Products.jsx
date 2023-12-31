@@ -1,12 +1,16 @@
 
 import React from 'react';
-import useScript from '../../assets/js/useScript';
 import '../../assets/styles/productos.css';
+import useScript from '../../assets/js/useScript'
+import ProductsController from '../../assets/js/ProductsController'
+import ProductCard from './ProductCard'
 
 
 export const Products = () => {
-    useScript('./src/assets/js/ProductsController.js')
-    useScript('./src/assets/js/productos.js')
+    useScript('./src/assets/js/productos.js');
+    const productsController = new ProductsController();
+
+    productsController.loadItemsFromLocalStorage();
     return (
         <main className="container">
             <section className="row">
@@ -17,11 +21,16 @@ export const Products = () => {
                     </div>
                 </div>
             </section>
-            <section className="row products-container" ></section>
-            {/* INICIO Y FIN DE CONTENEDOR DE LOS PRODUCTOS */}
-            <section className="products" />
-            {/* INICIO DE MODAL MODO RESPONSIVO */}
-            <div
+            <section className='row products-container'>
+                {productsController.productsList.map((product) => (
+                    <article className="col-6 col-md-4 col-lg-3" key={product.id}>
+                        <ProductCard product={product}/>
+                       
+                    </article>
+                ))}
+            </section>
+             {/* INICIO DE MODAL MODO RESPONSIVO */}
+             <div
                 className="modal fade"
                 id="productModal"
                 tabIndex={-1}
@@ -39,7 +48,7 @@ export const Products = () => {
                             />
                         </div>
                         <img
-                            onerror="this.onerror=null; this.src='../images/products-images/img-product-404.jpg'"
+                            onError={()=>"this.onerror=null; this.src='../images/products-images/img-product-404.jpg'"}
                             className="modal-img mx-auto"
                         />
                         <div className="modal-body">
@@ -55,6 +64,5 @@ export const Products = () => {
             </div>
             {/* FIN DE MODAL MODO RESPONSIVO */}
         </main>
-
     )
 }
