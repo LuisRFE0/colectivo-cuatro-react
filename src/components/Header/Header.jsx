@@ -1,7 +1,7 @@
 import '../../assets/styles/header.css'
 import logo from '../../assets/images/home/logo-carita.png';
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { hacere, sesionActiva } from '../../assets/js/login/sesionIniciada';
 
 const sesion = sesionActiva();
@@ -49,7 +49,7 @@ export const Header = () => {
                                     <Link to="/colectivo-cuatro-react/contacto" className={url === "/colectivo-cuatro-react/contacto" ? "nav-active" : ""}>Contacto</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link Link to="/colectivo-cuatro-react/nosotros" className={url === "/colectivo-cuatro-react/nosotros" ? "nav-active" : ""}>Conócenos</Link>
+                                    <Link to="/colectivo-cuatro-react/nosotros" className={url === "/colectivo-cuatro-react/nosotros" ? "nav-active" : ""}>Conócenos</Link>
                                 </li>
 
 
@@ -60,6 +60,7 @@ export const Header = () => {
                                     </Link>
                                     <ul className="dropdown-menu">
                                         <li id="item-2">Perfil</li>
+                                        <li id="item-2"><Link to="/colectivo-cuatro-react/productsform">Formulario</Link></li>
                                         <li id="item-3"><button className='nav-link color-texto' onClick={redirect}>Cerrar Sesión</button ></li>
                                     </ul>
                                 </li>

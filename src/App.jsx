@@ -8,6 +8,7 @@ import { Contact } from "./components/Contact/Contact";
 import { Nosotros } from "./components/AboutUs/Nosotros";
 import { Login } from "./components/Login/Login";
 import Singup from "./components/Login/Singup";
+import { ProductForm } from "./components/ProductForm/ProductForm";
 
 
 export const App = () => {
@@ -25,6 +26,7 @@ export const App = () => {
                     <Route path="/colectivo-cuatro-react/nosotros" element={<Nosotros />} />
                     <Route path="/colectivo-cuatro-react/login" element={<Login />} />
                     <Route path="/colectivo-cuatro-react/singup" element={<Singup />} />
+                    <Route path="/colectivo-cuatro-react/productsform" element={<ProductForm />} />
 
 
 
