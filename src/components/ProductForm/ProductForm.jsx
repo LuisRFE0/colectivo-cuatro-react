@@ -1,8 +1,27 @@
-
+import { useState } from 'react';
+import { validarform } from '../../assets/js/formProduct';
 import '../../assets/styles/formProduct.css';
 export const ProductForm = () => {
 
+    const [name, setName] = useState('');
+    const [description, setDescription] = useState('');
+    const [image, setImage] = useState('');
+    const [stock, setStock] = useState(0);
+    const [price, setPrice] = useState(0);
 
+    const validacion = (e) => {
+        e.preventDefault();
+
+        const productObj = {
+            name,
+            description,
+            image,
+            stock,
+            price
+        }
+
+        validarform(productObj);
+    }
 
 
     return (
@@ -47,7 +66,7 @@ export const ProductForm = () => {
                 <br />
                 <br />
                 <section className=" container form-product ">
-                    <form action=" #">
+                    <form action=" #" >
                         <div className="row mb-3  d-flex justify-content-center align-items-center ">
                             <label htmlFor="input-id" className="col-sm-2 col-form-label id-hidden">
                                 ID:
@@ -69,6 +88,7 @@ export const ProductForm = () => {
                             </label>
                             <div className="col-sm-6">
                                 <input
+                                    onChange={function (e) { setName(e.target.value) }}
                                     type="email"
                                     className="form-control"
                                     id="input-product"
@@ -83,6 +103,7 @@ export const ProductForm = () => {
                             </label>
                             <div className="col-sm-6">
                                 <input
+                                    onChange={function (e) { setStock(e.target.value) }}
                                     type="number"
                                     className="form-control"
                                     id="input-stock"
@@ -98,6 +119,7 @@ export const ProductForm = () => {
                             </label>
                             <div className="col-sm-6">
                                 <input
+                                    onChange={function (e) { setImage(e.target.value) }}
                                     type="text"
                                     className="form-control"
                                     id="input-image"
@@ -113,6 +135,7 @@ export const ProductForm = () => {
                             </label>
                             <div className="col-sm-6">
                                 <input
+                                    onChange={function (e) { setPrice(e.target.value) }}
                                     type="text"
                                     className="form-control"
                                     id="input-price"
@@ -128,6 +151,7 @@ export const ProductForm = () => {
                             </label>
                             <div className="col-sm-6">
                                 <textarea
+                                    onChange={function (e) { setDescription(e.target.value) }}
                                     className="form-control"
                                     name=""
                                     id="input-description"
@@ -143,6 +167,7 @@ export const ProductForm = () => {
                 </section>
                 <div className="mt-5 row options">
                     <button
+                        onClick={validacion}
                         type="button"
                         id="btn-create"
                         className="mx-5 my-2 col-sm-12 col-md-6  btn-view-local border-radius-local no-borde largo"
